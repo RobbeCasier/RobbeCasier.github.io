@@ -75,18 +75,20 @@
 	<div class="paragraph" style="text-align:center;">
 	Perk Manager
 	</div>
-	<div style="text-align:center">
+	<div>
 	When I started, they had all logic that the perks needed in almost entirely one file. There weren't that many perks but it is not managable when more would be added.
-	So I asked if I could try my hands on a better way, it was already marked as things that had to be done, but didn't yet decided when it would need to get changed.
+	So I asked if I could try my hands on a better way, it was already marked as things that had to be done, but didn't yet decided when it would need to get changed.<br>
 	Perks can increase stats, but could also do things (throwing knifes).
 	I decided that perks all would be derived from a base class.
-	Something that also was needed to be concidered was the fact that like "Throwing Knifes" have object that needed to be loaded. Ofcourse pooling had to be done.
-	And also perks could be upgraded when you select the perk multiple times.
-	A way I decided to do this was to let the "Perk Manager" create each perk, this would than lead to them creating a pool if neccesary.
+	<img src="../../assets/img/work/Underknight/Underknight_Base_Perk.jpg"></img>
+	Something that also had to be concidered was the fact that like "Throwing Knifes", have object that needed to be loaded. Ofcourse object pooling had to be done.
+	Perks also could be upgraded when you select the perk multiple times.
+	A way I decided to do this was to let the "Perk Manager" create each perk and keep it in a list.
+	And an object pooling would be created in the constructor.
 	All the intensive operation would be done when the game gets launched.
 	When the perk would be enabled it would be added to a list that is used to know which perks need to be updated. And also gets its amount increased.
-	Another script would store all the prefabs of the required object that the perks need to be pooled.
-		<img src="../../assets/img/work/Underknight/Underknight_Base_Perk.jpg"></img>
+	<img src="../../assets/img/work/Underknight/Underknight_NewPerkSystem_1.jpg"></img>
+	<img src="../../assets/img/work/Underknight/Underknight_NewPerkSystem_2.jpg"></img>
 	</div>
 	<div class="paragraph" style="text-align:center;">
 	Damage display
