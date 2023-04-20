@@ -37,7 +37,7 @@
     <span class="ti-arrow-up"></span>
   </div>
   
-  <div class="vg-page page-home" id="home" style="background-image: url(../../assets/img/work/ZombieGameAIPicture.jpg)">
+  <div class="vg-page page-home" id="home" style="background-image: url(../../assets/img/work/AlchemyWorld/AlchemyWorld.png)">
     <!-- Navbar -->
     <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">
       <div class="container">
@@ -59,42 +59,109 @@
     </div> <!-- End Navbar -->
     <!-- Caption header -->
     <div class="caption-header text-center wow zoomInDown">
-      <h5 class="fw-normal">Zombie Survivla Game AI</h5>
-      <div class="badge">University Project</div>
+      <h5 class="fw-normal">Alchemy World</h5>
+      <div class="badge">Personal Project</div>
     </div> <!-- End Caption header -->
     <div class="floating-button"><span class="ti-mouse"></span></div>
   </div>
   
   <div class="container">
 	<div class="paragraph">
-		<div style="position:relative;padding-bottom:56.25%;">
-		<iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;" width="100%" height="100%" src="https://www.youtube.com/embed/wdgkd-rzYzM?wmode=opaque" frameborder="0" allowfullscreen></iframe>
-		</div>
+		<!-- <div style="position:relative;padding-bottom:56.25%;"> -->
+		<!-- <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;" width="100%" height="100%" src="https://www.youtube.com/embed/wdgkd-rzYzM?wmode=opaque" frameborder="0" allowfullscreen></iframe> -->
+		<!-- </div> -->
 	</div>
 	<div class="paragraph">
-	The goal of this project was to let the AI survive as long as possible against a hord of zombies. The AI has to walk through the map and search for resources it could use to achieve this. These resources spawn only in houses, but the AI doesn't know more than what is in it's FOV.
+	After my internship at TruePlayers, they gave me an Oculus Quest 2 as gift for what I have done for them, since the internship wasn't paid.
+	<br>
+	For some time I wanted to do make something on my own. Only after I played a game called "Atelier: Ryza", I got the idea of making a game about creating and selling potions.
+	<br>
+	The project started a bit too ambitious for the time I had and I had to scale it down a lot.
+	<br>
+	I wanted to get a basic game at the end of my Easter Holidays. I started with the game in February. A total of 2.5 months where I spent the first 2 weeks fully on the game and the remaining 2 months 1-2 days a week.
 	</div>
 	<div class="paragraph">
-	In order to be able to search the whole map, I let the AI to 4 points on the map and while it goes to those points it collects where houses are and searches through them. With this knowledge, the AI doesn't has to rely on the 4 points to investigate houses after all 4 points have been reached. All other decisions where made with a behavior tree.
+	<center>
+	Idea
+	</center>
 	</div>
-	<div class="paragraph" style="text-align:center;">
+	<div>
+	-	Gather ingredients from different maps
+	<br>
+	-	Grow ingredients in a backyard
+	<br>
+	-	Research the effects ingredients have
+	<br>
+	-	Each game would randomize the effects ingredients would have
+	<br>
+	-	A system where opposite effect nullify eachother
+	<br>
+	-	Each effect has it's own color
+	<br>
+	-	A cauldron will blend the colors
+	<br>
+	-	A quality system for the finished product
+	</div>
+	<div class="paragraph">
+	<center>
+	Current Progress
+	</center>
+	</div>
+	<div>
+	-	Buy ingredients
+	<br>
+	-	Make potions
+	<br>
+	-	Sell potions
+	<br>
+	-	Customer AI
+	<br>
+	-	Day/Night cicle
+	</div>
+	
+	<div class="paragraph">
+	<center>
 	AI
+	</center>
 	</div>
-	<div style="text-align:center">
-		<img src="../../assets/img/work/ZombieAI/ZombieAI.png"></img>
+	<div>
+	<img width="100%" height="100%" src="../../assets/img/work/AlchemyWorld/CustomerAI.png">
 	</div>
-	<div class="paragraph" style="text-align:center;">
-	Face enemy
+	<div class="paragraph">
+	<center>
+	</center>
 	</div>
-	<div style="text-align:center">
-		<img src="../../assets/img/work/ZombieAI/FaceEnemy.jpg"></img>
+	
+	<div class="paragraph">
+	<center>
+	Remote Event Trigger
+	</center>
 	</div>
-	<div class="paragraph" style="text-align:center;">
-	Go to closest item
+	<div>
+	Although this is probably something most Unity games will have. I still wanted it to be included.
+	<br>
+	Because OnTriggerEnter() and OnTriggerExit() only work on scripts that are in a GameObject with a collider component. A central script for the entire GameObject can't get a call from this collider component.
+	<br>
+	So I made a script with some options I would need.
+	<br>
+	<center>
+	<img width="75%" height="75%" src="../../assets/img/work/AlchemyWorld/RemoteEventTrigger_code.png">
+	</center>
+	<br>
+	But it felt a bit messy having many fields in the inspector.
+	<br>
+	I made a editor script that would only display the events I want to add a reference to when I select a checkbox.
 	</div>
-	<div style="text-align:center">
-		<img src="../../assets/img/work/ZombieAI/GoToClosestItem.jpg"></img>
+	
+	<div class="container">
+	<div class="paragraph">
+	<strong>
+		<font size="5">Github</font>
+	</strong>
+	<br>
+	<a href="https://github.com/RobbeCasier/AlchemyWorld" target="_blank">https://github.com/RobbeCasier/AlchemyWorld</a>
 	</div>
+  </div> 
   </div>
   
   <script src="../../assets/js/jquery-3.5.1.min.js"></script>
