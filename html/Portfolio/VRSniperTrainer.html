@@ -66,8 +66,8 @@
 
     <div class="container">
         <div class="paragraph">
-            <div style="position:relative;padding-bottom:56.25%;">
-                <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;" width="100%" height="100%" src="https://www.youtube.com/watch?v=x6Zb8YumPBw" frameborder="0" allowfullscreen></iframe>
+            <div style="position:relative;">
+                <iframe width="100%" height="720" src="https://www.youtube.com/embed/x6Zb8YumPBw" title="VR Sniper Trainer build 2021208 gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
 		<div class="paragraph">
@@ -75,12 +75,14 @@
 		<a href="https://www.youtube.com/watch?v=x6Zb8YumPBw" target="_blank">link here</a>
 		</div>
         <div class="paragraph">
-            A project I had to make with 5 other people through our University for a client.
+            A project I had to make with 5 other people through our University for a client as a prototype. With a physical controller constructed from an airsoft with some 3D-printed parts to store one Oculus controller and an arduino chip for the bluetooth connection.
         </div>
+		<div class="paragraph">
+		<div style="text-align:center">
+		<img height="100%" width="50%" src="../../assets/img/work/VRSniperTrainer/controller.jpg"></img>
+		</div>
+		</div>
         <div class="paragraph">
-            Unfortunatly I couldn't retreive the files I worked on from the Perforce Server.
-            This was my first project I really got into Unity, C# and VR.
-            <br>
             The things I had to do in this project, where:
             <br>
             -	The scope functionality of the rifle (Zoom, Windage Dial and Elevation Dial)
@@ -88,7 +90,32 @@
             -	A range binocular and marking the targets on the screen of the binocular when in screen or with an arrow against the sides of the screen to indicate the direction
             <br>
             -	Tutorial screens, these screens were world screens with a marker and when you looked at it they would slide open and display tutorial text
+			<br>
+			-	Some smaller things.
         </div>
+		<div class="paragraph">
+			For every target in the world, a position on the screen of the range finder will be displayed. A red dot should appear to make it easier to find the target.
+		</div>
+		<div class="paragraph">
+		<div style="text-align:center" width="100%">
+		<img src="../../assets/img/work/VRSniperTrainer/RangeFinderSetPoint.png"></img>
+		</div>
+		</div>
+		<div class="paragraph">
+			When the user rotates the physical dial, a change in the scope should happen. This has to happen for 3 dials.
+			<br>
+			Here I show 2 of them as the 3th is just the same but for calculating the change that would happen for elevation change.
+		</div>
+		<div class="paragraph">
+		<div style="text-align:center" width="100%">
+		<img src="../../assets/img/work/VRSniperTrainer/ScopeZoom.png"></img>
+		</div>
+		</div>
+		<div class="paragraph">
+		<div style="text-align:center" width="100%">
+		<img src="../../assets/img/work/VRSniperTrainer/ScopeWindage.png"></img>
+		</div>
+		</div>
     </div>
 
     <script src="../../assets/js/jquery-3.5.1.min.js"></script>
