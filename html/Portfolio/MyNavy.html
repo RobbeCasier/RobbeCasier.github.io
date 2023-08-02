@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <meta name="copyright" content="MACode ID, https://www.macodeid.com/">
+  
+  <title>Portfolio - Robbe Casier - Forest Fire Simulation</title>
+
+  <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+  
+  <link rel="stylesheet" type="text/css" href="../../assets/css/themify-icons.css">
+  
+  <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.css">
+
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/animate/animate.css">
+  
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/owl-carousel/owl.carousel.css">
+  
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/perfect-scrollbar/css/perfect-scrollbar.css">
+  
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/nice-select/css/nice-select.css">
+  
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/fancybox/css/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="../../assets/css/virtual.css">
+  
+  <link rel="stylesheet" type="text/css" href="../../assets/css/topbar.virtual.css">
+</head>
+<body class="theme-red">
+  
+  <!-- Back to top button -->
+  <div class="btn-back_to_top">
+    <span class="ti-arrow-up"></span>
+  </div>
+  
+  <div class="vg-page page-home" id="home" style="background-image: url(../../assets/img/wip.png)">
+    <!-- Navbar -->
+    <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a href="../../index.html" class="navbar-brand">Back</a>
+				<button class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar" aria-expanded="true">
+					<span class="ti-menu"></span>
+				</button>
+            </li>
+          </ul>
+          <ul class="nav ml-auto">
+            <li class="nav-item">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> <!-- End Navbar -->
+    <!-- Caption header -->
+    <div class="caption-header text-center wow zoomInDown">
+      <h5 class="fw-normal">Time Event Schedular (Game Project Part)(C++/UE5)</h5>
+      <div class="badge">Personal Project</div>
+    </div> <!-- End Caption header -->
+    <div class="floating-button"><span class="ti-mouse"></span></div>
+  </div>
+  
+  <div class="container">
+	<div class="paragraph">
+	The Time Event Schedular is something I came up with when going over a selected part of a game mechanic that will be in a personal project. I want to implement a basic weather system, but the player must be able to get information about possible weather changes through a device.<br>
+	Usually you would keep the total elapsed time in the class itself and when exceeding the limit, the desired logic happens. Many times having these variables, representing time, starts to make the class more than what it was meant to be. <br><br>
+	For the weather system, who's purpose is to control game mechanics that rely on weather. <br><br>
+	Of course having only one class who uses the Update function for calling time-based events is not so bad. But if you have multiple mechanics that need time-based events that lead from seconds to minutes before they are actually called would mean that the engine would need to go over multiple classes that use the same logic, but some happen to do something later than others.<br>
+	So I was thinking, "Can I have a class that only uses 2 time variables and call events at the right time?".
+	<br><br>
+	Using pen and paper I wrote possibilities of actions that could happen when adding a new event to the stack and came to a conclusion that it was possible to do so.
+	<div class="paragraph" style="text-align:center;">
+	Command Pattern
+	</div>
+	<div>
+		It became quite clear I had to use the Command Pattern in order to achieve my goal.
+	</div>
+	<div>
+	<center>
+	<img src="../../assets/img/work/MyNavy/CmdChangeWind.png"></img>
+	</center>
+	</div>
+	<div class="paragraph" style="text-align:center;">
+	TimeEventData
+	</div>
+	<div>
+		I needed a data structure for the basic information that would be required. I also added a possible future option for repeatable events at fixed intervals.
+	</div>
+	<div>
+	<center>
+	<img src="../../assets/img/work/MyNavy/TimeEventData.png"></img>
+	</center>
+	</div>
+	<div class="paragraph" style="text-align:center;">
+	TimeEventSchedular
+	</div>
+	<div>
+	</div>
+	<div>
+	<center>
+	<img src="../../assets/img/work/MyNavy/TimeEventSchedularHeader.png"></img>
+	</center>
+	</div>
+	<br>
+	<div>
+	<center>
+	<img src="../../assets/img/work/MyNavy/AddEvent.png"></img>
+	</center>
+	</div>
+	<br>
+	<div>
+	<center>
+	<img src="../../assets/img/work/MyNavy/UpdateFunction.png"></img>
+	</center>
+	</div>
+	</div>
+	<div class="container">
+	<!-- <div class="paragraph"> -->
+	<!-- <strong> -->
+		<!-- <font size="5">Github</font> -->
+	<!-- </strong> -->
+	<!-- <br> -->
+	<!-- <a href="https://github.com/RobbeCasier/Ring_Modulator" target="_blank">https://github.com/RobbeCasier/Ring_Modulator</a> -->
+	<!-- </div> -->
+  </div> 
+	
+  <script src="../../assets/js/jquery-3.5.1.min.js"></script>
+    
+  <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    
+  <script src="../../assets/vendor/owl-carousel/owl.carousel.min.js"></script>
+    
+  <script src="../../assets/vendor/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+    
+  <script src="../../assets/vendor/isotope/isotope.pkgd.min.js"></script>
+    
+  <script src="../../assets/vendor/nice-select/js/jquery.nice-select.min.js"></script>
+    
+  <script src="../../assets/vendor/fancybox/js/jquery.fancybox.min.js"></script>
+
+  <script src="../../assets/vendor/wow/wow.min.js"></script>
+
+  <script src="../../assets/vendor/animateNumber/jquery.animateNumber.min.js"></script>
+
+  <script src="../../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+
+  <script src="../../assets/js/google-maps.js"></script>
+    
+  <script src="../../assets/js/topbar-virtual.js"></script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
+  
+</body>
+</html>
